@@ -2,6 +2,11 @@ import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { handleRegister } from "../utils/resource";
 
+import { handleRegister } from "../utils/resource";
+import { useNavigate } from "react-router-dom";
+
+const navigate = useNavigate();
+
 const Signup = () => {
         const [username, setUsername] = useState("");
         const [password, setPassword] = useState("");
@@ -11,7 +16,8 @@ const Signup = () => {
         const handleSubmit = (e) => {
             e.preventDefault();
             if (username.trim() && password.trim() && email.trim()) {
-                console.log(email, username, password);
+                console.log(email, username, password, navigate);
+                handleRegister(email, username, password, navigate);
                 setPassword("");
                 setUsername("");
                 setEmail("");

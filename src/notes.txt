@@ -1,3 +1,5 @@
 I am at https://novu.co/blog/creating-a-scheduling-app-with-react-nodejs-and-emailjs/
 
-Dashboard Component
+Accept the user’s credentials and create an account on the server.
+This is after the : 
+Update the handleRegister function to make a POST request to the server.
